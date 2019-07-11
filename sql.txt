@@ -1,0 +1,87 @@
+---employ table formation
+CREATE TABLE dbo.Employ
+(
+Empid INT,
+EmpName VARCHAR(150),
+)
+--add columns
+SELECT * FROM Employ
+ALTER TABLE Employ ADD EmpDep VARCHAR(50)
+ALTER TABLE Employ ADD EmpSalary MONEY
+//ALTER TABLE Employ ADD Managerid VARCHAR(50)
+---dept table formation
+CREATE TABLE dbo.Dept
+(
+Deptid INT,
+Deptname VARCHAR(150),
+)
+--insert the details for dept
+SELECT * FROM Dept
+INSERT INTO Dept VALUES(501,'developer')
+SELECT * FROM Dept
+INSERT INTO Dept
+SELECT 502,'marketing' UNION ALL
+SELECT 503,'trainer' UNION ALL
+--update the length of string
+ALTER TABLE Employ ALTER COLUMN EmpName VARCHAR(200) 
+---insert the details for employ
+SELECT * FROM Employ 
+INSERT INTO Employ VALUES(101,'ABI','developer',80000)
+SELECT * FROM Employ
+INSERT INTO Employ
+SELECT 102,'BOB','marketing',90000 UNION ALL
+SELECT 103,'CHARU','trainer',85000 UNION ALL
+SELECT 104,'DEV','hr',100000 UNION ALL
+SELECT 105,'GIRI','testing',95000 UNION ALL
+--update the salary
+SELECT * FROM Employ
+UPDATE Employ SET EmpSalary=96000 WHERE Empid=105
+--delete 2 employ
+SELECT * FROM Employ
+DELETE FROM Employ WHERE Empid BETWEEN 102 AND 103
+--inner join
+SELECT  
+FROM Employ A
+INNER JOIN Dept B
+ON A.Empdep = B.Deptname
+--INSERT INTO Employ_prithi 
+--SELECT 106,'JANU','developer',89000,504
+
+
+CREATE TABLE Emplo(Empid INT,EmpName VARCHAR(150),EmpSalary MONEY,Emp_dept_id);
+
+INSERT INTO Emplo VALUES(1,"tom",90000,101);
+INSERT INTO Emplo VALUES(2,"lucky",85000,102);
+INSERT INTO Emplo VALUES(3,"Frank",76000,103);
+INSERT INTO Emplo VALUES(4,"Jane",92000,104);
+INSERT INTO Emplo VALUES(5,"Robert",95000,105);
+SELECT * FROM Emplo;
+CREATE TABLE Depar(Dept_id INT,Dept_name VARCHAR(150));
+INSERT INTO Depar VALUES(101,"analysis");
+INSERT INTO Depar VALUES(102,"tester");
+INSERT INTO Depar VALUES(103,"Develper");
+
+
+
+
+
+
+
+SELECT * FROM Depar;
+SELECT * FROM Emplo LEFT JOIN Depar ON Emp_dept_id = Dept_id;
+
+
+
+CREATE TABLE dbo.q1_prithiba
+(
+prod_name VARCHAR(150),
+supp_name VARCHAR(150),
+)
+SELECT * FROM q1_prithiba
+INSERT INTO  q1_prithiba
+SELECT '5star','AMMU' UNION ALL
+SELECT 'munch','BOB' UNION ALL
+SELECT 'dairy','CHARU' UNION ALL
+SELECT 'milkybar','DEV' UNION ALL
+SELECT 'cofeebite','GIRI'
+SELECT * FROM q1_prithiba
