@@ -1,0 +1,95 @@
+-------Fact and Dimension Tables--------
+
+1.Categories
+    Fact:categoryid,categoryName
+    Dimension:description,pictures
+
+2.Customer and Suppliers by City
+    Fact: CompanyName, ContactName
+    Dimension: City,Relation
+
+3.Customers
+    Fact: CustomerId,ContactName,Address,PostalCode,Phone,Fax
+    Dimension: ContactTitle,City,Region,Country
+
+4.Emp Table
+    Fact:empno,ename,Hiredate,
+    Dimension: Job,Salary,Comm,dept,mgr
+
+5.Employees
+    Fact:EmployeeID,LastName,FirstName,Address,PostalCode,HomePhone,Extension,Notes,
+    Dimension:BirthDate,HireDate,City,Region,Country,Photo,Report to,Photo Path,Salary
+
+6.EmployeeTerritories
+     Fact:TerritoryId
+     Dimensions:EmployeeId
+
+7.Fact_sales
+     Fact:Total Amount
+     Dimension: CustomerId,ProductId,EmployeeId,OrderDate_Id,requiredDate_id,ShippedDate_id,Order_id,Shipper,UnitPrice,Quantity,Discount,Freight
+
+8.Invoices
+            ShipName,ShipAddress,ShipCity,ShipRegion,ShipPostalCode,ShipCountry,CustomerId,
+                CustomerName,Address,city,Region,PostalCode,Country,SalesPerson,OrderId,OrderDate,RequiredDate,ShippedDate,
+                ShipperName,ProductId,Productname,UnitPrice,Quantity,Discount,ExtendedPrice,Freight,status
+
+
+9.Order details Extended:
+      OrderId,ProductId,ProductName,UnitPrice,Quantity,Discount,Extended Price
+
+10.Order subtotals
+      Dimension: orderId,Subtotal
+
+11. Territories
+      TerritoryId,TerritoryDescription,RegionId
+
+12.TempShy2
+      FirstName,LastName
+
+13.Tempshy
+      OrderId,Contactname,CustomerId
+
+14.Suppliers
+      Supplierid,CompanyName,ContactName,ContactTitle,Address,city,Region,PostalCode,country,phone,fax,HomePage
+
+15.Summary of sales by year
+     ShippedDate,OrderID,Subtotal
+
+16.Summary of Sales by Quarter
+     ShippedDate,OrderID,Subtotal
+
+17.Shippers
+     ShipperID,CompanyName,Phone
+
+18.Sales Totals by Amount
+     SaleAmount,OrderId,CompanyName,ShippedDate
+
+19.Sales by category
+    categoryId,CategoryName,Productname,productSales
+
+20.Region 
+     RegionID,RegionDescription
+
+21.Products above Average price
+     ProductName,unitprice
+
+22.Products by category
+     CategoryName,ProductName,QuantityPerUnit,UnitsInStock,Discontinued
+
+23.Products
+    productId,ProductName,SuppilerId,CategoryId,QuantityPerUnit,UnitPrice,UnitsOnOrder,UnitsInStock,RecordsLevel,Discontinued
+
+24.Product Sales for 1997
+    CategoryName,ProductName,ProductSales
+
+25.Orders Qry
+     OrderId,CustomerId,EmployeeId,OrderDate,RequiredDate,ShippedDate,ShipVia,Freight,ShipName,ShipAddress,ShipCity,ShipRegion,ShipPosatlCode,ShipCountry,CompanyName,Address,City,
+     Region,PostalCode,Country
+
+26.Orders
+     OrderId,CustomerId,EmployeeId,OrderDate,RequiredDate,ShippedDate,ShipVia,Freight,ShipName,ShipAddress,ShipCity,ShipRegion,ShipPostalCode,ShipCountry
+
+
+27.Order Details
+     OrderId,ProductId,UnitPrice,Quantity,Discount
+
